@@ -4,8 +4,8 @@ export const MUSICIANS = [
   {
     group: 'Strings',
     members: [
-      { name: 'Jane Lee', instrument: 'Violin' },
-      { name: 'Emma Northcutt', instrument: 'Violin' },
+      { name: 'Jane Lee', instrument: 'Violin', photo: '/nycc-web/musicians/jane.jpg' },
+      { name: 'Emma Northcutt', instrument: 'Violin', photo: '/nycc-web/musicians/emma.jpg' },
       { name: 'TBD', instrument: 'Viola', status: 'Coming soon' },
     ],
   },

@@ -1,4 +1,5 @@
 import { MUSICIANS } from '../data/musicians.js'
+import Photo from '../components/Photo.jsx'
 
 export default function Musicians() {
   return (
@@ -18,7 +19,12 @@ export default function Musicians() {
               <div className="mus-grid">
                 {group.members.map((m, i) => (
                   <div className="mus-card" key={`${group.group}-${i}`}>
-                    <div className="ph ph-wide">Photo coming soon</div>
+                    <Photo
+                      src={m.photo}
+                      alt={m.name}
+                      imgClass="mus-photo"
+                      phClass="ph ph-wide"
+                    />
                     <h4>{m.name}</h4>
                     <p className="role">{m.instrument}</p>
                     {m.status && <p className="status">{m.status}</p>}
