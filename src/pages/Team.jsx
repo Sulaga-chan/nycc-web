@@ -12,7 +12,16 @@ const TEAM = [
   },
   {
     name: 'Jaehun Lee',
-    role: 'Engineer',
+    role: 'Engineer · Web Designer',
+    photo: null,
+    bio: [
+      "Jaehun is the engineer and web designer behind New York Chamber Collective's online presence, building and maintaining the ensemble's website. A computer science student who describes himself as an explorer and connector, he pairs a developer's discipline with a genuine musician's ear — he began on piano and plays six instruments, including violin and electric guitar, and once earned an award performing with his band, Bohemian.",
+      "Fluent in Korean, English, and Japanese (JLPT N2), he has interpreted at international events and volunteered on projects from Cambodia to coding education. Having learned across seven countries, he brings that same curiosity and care for people to every detail of the Collective's design.",
+    ],
+  },
+  {
+    name: 'Hunter Young',
+    role: 'COO / General Manager',
     photo: null,
     bio: ['Bio coming soon.'],
   },
