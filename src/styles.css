@@ -239,7 +239,7 @@ img {
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  min-height: 82vh;
+  min-height: 78vh;
   display: flex;
   align-items: stretch;
   background: #0d0d0d url('/nycc-web/hero.jpg') center / cover no-repeat;
