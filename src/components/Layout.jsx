@@ -7,6 +7,7 @@ const NAV = [
   { to: '/team', label: 'Team' },
   { to: '/musicians', label: 'Musicians' },
   { to: '/gallery', label: 'Gallery' },
+  { to: '/video', label: 'Video' },
   { to: '/contact', label: 'Contact' },
 ]
 
