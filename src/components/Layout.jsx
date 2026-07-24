@@ -41,7 +41,8 @@ export default function Layout() {
       <header className="header">
         <div className="container header-inner">
           <Link to="/" className="brand" onClick={() => setOpen(false)}>
-            New York Chamber Collective
+            <img className="brand-mark" src="/nycc-web/logo/symbol.png" alt="" aria-hidden="true" />
+            <span>New York Chamber Collective</span>
           </Link>
 
           <button
@@ -78,6 +79,11 @@ export default function Layout() {
 
       <footer className="footer">
         <div className="container footer-inner">
+          <img
+            className="footer-logo"
+            src="/nycc-web/logo/full.png"
+            alt="New York Chamber Collective"
+          />
           <div>
             <Socials />
             <p className="footer-note">Sign up to receive news and updates.</p>

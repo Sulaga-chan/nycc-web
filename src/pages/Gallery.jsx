@@ -7,7 +7,13 @@
 //
 // and render them inside .gallery-grid. Videos can use an <iframe> (YouTube/Vimeo)
 // or a <video> tag.
-const PHOTOS = []
+const PHOTOS = [
+  {
+    src: '/nycc-web/gallery/gala.jpg',
+    alt: 'Live performance at a New York gala',
+    caption: 'Gala performance · New York',
+  },
+]
 const VIDEOS = []
 
 export default function Gallery() {
@@ -21,7 +27,10 @@ export default function Gallery() {
         {PHOTOS.length > 0 ? (
           <div className="gallery-grid" style={{ marginTop: '3rem' }}>
             {PHOTOS.map((p, i) => (
-              <img key={i} src={p.src} alt={p.alt} />
+              <figure key={i}>
+                <img src={p.src} alt={p.alt} loading="lazy" />
+                {p.caption && <figcaption>{p.caption}</figcaption>}
+              </figure>
             ))}
           </div>
         ) : (

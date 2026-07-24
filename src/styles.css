@@ -49,6 +49,33 @@ a {
 img {
   max-width: 100%;
   display: block;
+  /* Casual download deterrents (not foolproof — see Photo/App notes) */
+  -webkit-user-drag: none;
+  -khtml-user-drag: none;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+/* Brand logo in header */
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.brand-mark {
+  height: 34px;
+  width: auto;
+  flex: none;
+}
+
+/* Full logo in footer */
+.footer-logo {
+  height: 110px;
+  width: auto;
+  align-self: flex-start;
+  margin-bottom: 1.25rem;
 }
 
 .container {
@@ -371,9 +398,25 @@ img {
 
 /* ---------- Gallery ---------- */
 .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1rem;
+  columns: 3 280px;
+  column-gap: 1.25rem;
+}
+
+.gallery-grid figure {
+  break-inside: avoid;
+  margin: 0 0 1.25rem;
+}
+
+.gallery-grid img {
+  width: 100%;
+  height: auto;
+}
+
+.gallery-grid figcaption {
+  font-size: 0.8rem;
+  color: var(--muted);
+  letter-spacing: 0.04em;
+  margin-top: 0.5rem;
 }
 
 .gallery-note {

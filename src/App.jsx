@@ -1,3 +1,4 @@
+import { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
@@ -10,6 +11,17 @@ import Video from './pages/Video.jsx'
 import Contact from './pages/Contact.jsx'
 
 export default function App() {
+  // Casual deterrent: block right-click "Save image as" on images.
+  // Note: this does NOT truly protect images — anyone can still grab them via
+  // dev tools, the network tab, or a screenshot. It only stops casual saving.
+  useEffect(() => {
+    const block = (e) => {
+      if (e.target.tagName === 'IMG') e.preventDefault()
+    }
+    document.addEventListener('contextmenu', block)
+    return () => document.removeEventListener('contextmenu', block)
+  }, [])
+
   return (
     <>
       <ScrollToTop />
