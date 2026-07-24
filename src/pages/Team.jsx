@@ -19,7 +19,7 @@ const TEAM = [
     cutout: true,
     bio: [
       "Jaehun is the engineer and web designer behind New York Chamber Collective's online presence, building and maintaining the ensemble's website. A computer science student who has interned at Seoul National University, he pairs a developer's discipline with a genuine musician's ear — he began on piano and went on to play six instruments, from violin and electric guitar to the harp, and once earned an award performing with his band, Bohemian.",
-      "Fluent in Korean and English, he has volunteered on projects from Cambodia to coding education and has learned across seven countries — bringing that same curiosity and care for people to every detail of the Collective's design.",
+      "That rare mix of technical skill and musical sensibility shapes how the Collective looks and feels online — considered, elegant, and true to the music. He looks after the ensemble's website and digital presence so its musicians can focus on the stage.",
     ],
   },
   {
