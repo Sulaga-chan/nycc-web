@@ -23,7 +23,9 @@ const TEAM = [
     name: 'Hunter Young',
     role: 'COO / General Manager',
     photo: null,
-    bio: ['Bio coming soon.'],
+    bio: [
+      'Hunter oversees the day-to-day operations of New York Chamber Collective — from client bookings and scheduling to coordinating the right musicians for every event. With an eye for detail and a focus on clear communication, he makes sure each performance runs seamlessly from the first inquiry to the final encore.',
+    ],
   },
 ]
 

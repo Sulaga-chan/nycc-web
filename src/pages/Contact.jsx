@@ -3,7 +3,7 @@ import { useState } from 'react'
 // No backend on GitHub Pages, so the form composes an email via the visitor's
 // mail client. To collect submissions server-side instead, swap this for a
 // Formspree/Getform endpoint (set method="post" action="https://formspree.io/f/xxxx").
-const CONTACT_EMAIL = 'hello@newyorkchambercollective.com'
+const CONTACT_EMAIL = 'info@nychambercollective.org'
 
 export default function Contact() {
   const [form, setForm] = useState({ name: '', email: '', message: '' })
