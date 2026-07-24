@@ -242,7 +242,7 @@ img {
   min-height: 82vh;
   display: flex;
   align-items: stretch;
-  background: #0d0d0d url('/nycc-web/gallery/gala.jpg') center 25% / cover no-repeat;
+  background: #0d0d0d url('/nycc-web/hero.jpg') center / cover no-repeat;
   color: #fff;
   overflow: hidden;
 }

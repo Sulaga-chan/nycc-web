@@ -82,15 +82,30 @@ export default function Layout() {
           <div>
             <Socials />
             <p className="footer-note">Sign up to receive news and updates.</p>
-            {/* Static site: wire this form to a service (Formspree, Buttondown, etc.) or replace with a mailto link. */}
+            {/* Connected via FormSubmit (no account needed). Signups are emailed to
+                the address below. IMPORTANT: FormSubmit requires a one-time activation —
+                the first submission sends a confirmation link to that inbox that must be
+                clicked before delivery starts. Change the email in the action to reroute. */}
             <form
               className="newsletter"
-              onSubmit={(e) => {
-                e.preventDefault()
-                alert('Newsletter signup is a placeholder — connect a form service to enable it.')
-              }}
+              action="https://formsubmit.co/info@nychambercollective.org"
+              method="POST"
             >
-              <input type="email" placeholder="Email Address" aria-label="Email Address" required />
+              <input type="hidden" name="_subject" value="New newsletter signup — NYCC" />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="table" />
+              <input
+                type="hidden"
+                name="_next"
+                value="https://sulaga-chan.github.io/nycc-web/#/"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Email Address"
+                aria-label="Email Address"
+                required
+              />
               <button type="submit">Sign Up</button>
             </form>
           </div>
