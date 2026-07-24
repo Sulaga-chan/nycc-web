@@ -361,6 +361,16 @@ img {
   width: 100%;
 }
 
+/* Transparent full-body cutouts: show the whole figure (incl. face) on a soft frame */
+.person-media.is-cutout {
+  background: var(--bg-soft);
+}
+
+.person-media.is-cutout img {
+  object-fit: contain;
+  object-position: center bottom;
+}
+
 /* ---------- Musicians ---------- */
 .mus-group {
   margin-bottom: clamp(2.5rem, 6vw, 4rem);

@@ -79,11 +79,6 @@ export default function Layout() {
 
       <footer className="footer">
         <div className="container footer-inner">
-          <img
-            className="footer-logo"
-            src="/nycc-web/logo/full.png"
-            alt="New York Chamber Collective"
-          />
           <div>
             <Socials />
             <p className="footer-note">Sign up to receive news and updates.</p>
