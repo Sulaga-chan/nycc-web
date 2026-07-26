@@ -41,7 +41,7 @@ export default function Layout() {
       <header className="header">
         <div className="container header-inner">
           <Link to="/" className="brand" onClick={() => setOpen(false)}>
-            <img className="brand-mark" src="/nycc-web/logo/symbol.png" alt="" aria-hidden="true" />
+            <img className="brand-mark" src="/nycc-web/logo/mark.png" alt="" aria-hidden="true" />
             <span>New York Chamber Collective</span>
           </Link>
 
