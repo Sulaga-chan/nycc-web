@@ -6,7 +6,7 @@ export const MUSICIANS = [
     members: [
       { name: 'Jane Lee', instrument: 'Violin', photo: '/nycc-web/musicians/jane.jpg' },
       { name: 'Emma Northcutt', instrument: 'Violin', photo: '/nycc-web/musicians/emma.jpg' },
-      { name: 'TBD', instrument: 'Viola', status: 'Coming soon' },
+      { name: 'Olive Fretts Howard', instrument: 'Viola', photo: '/nycc-web/musicians/olive.jpg' },
     ],
   },
   {
