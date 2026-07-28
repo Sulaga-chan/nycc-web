@@ -10,8 +10,8 @@
 const PHOTOS = [
   {
     src: '/nycc-web/gallery/gala.jpg',
-    alt: 'Live performance at a New York gala',
-    caption: 'Gala performance · New York',
+    alt: 'Live performance at the Metropolitan Club, New York',
+    caption: 'Metropolitan Club, New York',
   },
 ]
 const VIDEOS = []

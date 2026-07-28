@@ -7,6 +7,13 @@ export const MUSICIANS = [
       { name: 'Jane Lee', instrument: 'Violin', photo: '/nycc-web/musicians/jane.jpg' },
       { name: 'Emma Northcutt', instrument: 'Violin', photo: '/nycc-web/musicians/emma.jpg' },
       { name: 'Olive Fretts Howard', instrument: 'Viola', photo: '/nycc-web/musicians/olive.jpg' },
+      { name: 'TBD', instrument: 'Cello', status: 'Coming soon' },
+    ],
+  },
+  {
+    group: 'Keyboard',
+    members: [
+      { name: 'Kimia Rafieian', instrument: 'Piano' },
     ],
   },
   {
