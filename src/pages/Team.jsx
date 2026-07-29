@@ -8,9 +8,10 @@ const TEAM = [
     role: 'Founder · CEO',
     photo: '/nycc-web/team/jane.jpg',
     bio: [
-      'Jane is a graduate of the University of Michigan, where she earned her Master of Music degree in Violin Performance and studied with Professor David Halen, concertmaster of the St. Louis Symphony Orchestra.',
-      'As a professional violinist, Jane performs in small ensembles for weddings and private events across New York, New Jersey, and Connecticut. Her performances have appeared in venues including Carnegie Hall, Lincoln Center, and The Plaza Hotel in New York City.',
+      'Jane is an active performer, educator, and administrator in New York City. She is a graduate from the University of Michigan where she earned her Master of Music degree in Violin Performance and studied with Professor David Halen, a concertmaster of the St. Louis Symphony Orchestra.',
+      'As a professional violinist, Jane performs with professional orchestras across the country and in small ensembles for weddings and private events across New York, New Jersey, and Connecticut. She performed in numerous worldwide venues including Carnegie Hall, Madison Square Garden, Lincoln Center, Metropolitan Club, The Lotos Club, and The Plaza Hotel in New York City.',
     ],
+    website: 'https://www.janeleeviolin.com',
   },
   {
     name: 'Jaehun Lee',
@@ -58,6 +59,19 @@ export default function Team() {
                 {m.bio.map((p, i) => (
                   <p key={i}>{p}</p>
                 ))}
+                {m.website && (
+                  <p>
+                    Her full bio can be found on:{' '}
+                    <a
+                      href={m.website}
+                      target="_blank"
+                      rel="noreferrer"
+                      style={{ borderBottom: '1px solid currentColor' }}
+                    >
+                      {m.website.replace(/^https?:\/\//, '')}
+                    </a>
+                  </p>
+                )}
               </div>
             </article>
           ))}
