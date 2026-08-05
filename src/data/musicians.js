@@ -20,7 +20,7 @@ export const MUSICIANS = [
     group: 'Woodwinds',
     members: [
       { name: 'Nicole Martin', instrument: 'Clarinet' },
-      { name: 'Kennedy Plains', instrument: 'Bassoon' },
+      { name: 'Kennedy Plains', instrument: 'Bassoon', photo: '/nycc-web/musicians/kennedy.jpg' },
       { name: 'TBD', instrument: 'Flute', status: 'Coming soon' },
     ],
   },
