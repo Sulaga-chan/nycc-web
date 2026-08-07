@@ -4,6 +4,7 @@ import Layout from './components/Layout.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
+import Services from './pages/Services.jsx'
 import Team from './pages/Team.jsx'
 import Musicians from './pages/Musicians.jsx'
 import Gallery from './pages/Gallery.jsx'
@@ -29,6 +30,7 @@ export default function App() {
         <Route element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="about" element={<About />} />
+          <Route path="services" element={<Services />} />
           <Route path="team" element={<Team />} />
           <Route path="musicians" element={<Musicians />} />
           <Route path="gallery" element={<Gallery />} />
