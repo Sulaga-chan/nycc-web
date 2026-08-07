@@ -65,7 +65,7 @@ img {
 }
 
 .brand-mark {
-  height: 58px;
+  height: 50px;
   width: auto;
   flex: none;
 }
@@ -99,14 +99,14 @@ img {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 1.5rem;
+  gap: 2.5rem;
   min-height: 72px;
 }
 
 .brand {
   font-family: var(--serif);
   font-weight: 600;
-  font-size: clamp(1.1rem, 2.2vw, 1.5rem);
+  font-size: clamp(1rem, 1.6vw, 1.25rem);
   letter-spacing: 0.01em;
   white-space: nowrap;
 }
@@ -114,14 +114,15 @@ img {
 .nav {
   display: flex;
   align-items: center;
-  gap: clamp(1rem, 2.5vw, 2rem);
+  gap: clamp(0.85rem, 1.5vw, 1.35rem);
 }
 
 .nav a {
-  font-size: 0.95rem;
+  font-size: 0.9rem;
   color: var(--ink);
   position: relative;
   padding-bottom: 2px;
+  white-space: nowrap;
 }
 
 .nav a.active,
