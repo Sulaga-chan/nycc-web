@@ -2,14 +2,14 @@
 // added later. To add images, drop files in /public/gallery and map them here:
 //
 //   const PHOTOS = [
-//     { src: '/nycc-web/gallery/01.jpg', alt: 'Wedding ceremony quartet' },
+//     { src: '/gallery/01.jpg', alt: 'Wedding ceremony quartet' },
 //   ]
 //
 // and render them inside .gallery-grid. Videos can use an <iframe> (YouTube/Vimeo)
 // or a <video> tag.
 const PHOTOS = [
   {
-    src: '/nycc-web/gallery/gala.jpg',
+    src: '/gallery/gala.jpg',
     alt: 'Live performance at the Metropolitan Club, New York',
     caption: 'Metropolitan Club, New York',
   },

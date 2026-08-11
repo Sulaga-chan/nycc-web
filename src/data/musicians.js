@@ -4,9 +4,9 @@ export const MUSICIANS = [
   {
     group: 'Strings',
     members: [
-      { name: 'Jane Lee', instrument: 'Violin', photo: '/nycc-web/musicians/jane.jpg' },
-      { name: 'Emma Northcutt', instrument: 'Violin', photo: '/nycc-web/musicians/emma.jpg' },
-      { name: 'Olive Fretts Howard', instrument: 'Viola', photo: '/nycc-web/musicians/olive.jpg' },
+      { name: 'Jane Lee', instrument: 'Violin', photo: '/musicians/jane.jpg' },
+      { name: 'Emma Northcutt', instrument: 'Violin', photo: '/musicians/emma.jpg' },
+      { name: 'Olive Fretts Howard', instrument: 'Viola', photo: '/musicians/olive.jpg' },
       { name: 'TBD', instrument: 'Cello', status: 'Coming soon' },
     ],
   },
@@ -20,7 +20,7 @@ export const MUSICIANS = [
     group: 'Woodwinds',
     members: [
       { name: 'Nicole Martin', instrument: 'Clarinet' },
-      { name: 'Kennedy Plains', instrument: 'Bassoon', photo: '/nycc-web/musicians/kennedy.jpg' },
+      { name: 'Kennedy Plains', instrument: 'Bassoon', photo: '/musicians/kennedy.jpg' },
       { name: 'TBD', instrument: 'Flute', status: 'Coming soon' },
     ],
   },

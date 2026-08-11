@@ -3,7 +3,7 @@
 Code-managed version of the New York Chamber Collective site, built with **Vite + React**
 and deployed to **GitHub Pages**. (The client-editable version lives separately on Squarespace.)
 
-**Live:** https://sulaga-chan.github.io/nycc-web/
+**Live:** https://newyorkchambercollective.org/ (also at https://sulaga-chan.github.io/nycc-web/, which redirects to the custom domain)
 
 ## Develop
 
@@ -35,7 +35,7 @@ src/
 ## Editing content
 
 - **Team** — edit the `TEAM` array in `src/pages/Team.jsx`. Add a photo by dropping a
-  file in `public/` and setting `photo: '/nycc-web/team/name.jpg'`.
+  file in `public/` and setting `photo: '/team/name.jpg'`.
 - **Musicians** — edit `src/data/musicians.js`.
 - **Gallery** — currently empty. Add files to `public/gallery/` and list them in the
   `PHOTOS` / `VIDEOS` arrays in `src/pages/Gallery.jsx`.
@@ -47,5 +47,7 @@ src/
 
 - Routing uses `HashRouter` (URLs look like `/#/about`) so deep links never 404 on
   GitHub Pages. Switch to `BrowserRouter` + a `404.html` fallback if clean URLs matter.
-- `base` in `vite.config.js` is `/nycc-web/` to match the repo name. Rename both if you
-  rename the repo.
+- `base` in `vite.config.js` is `/` because the site is served at the root of the custom
+  domain **newyorkchambercollective.org** (via `public/CNAME`). Asset paths are root-absolute
+  (`/team/…`, `/hero.jpg`). If you ever serve it back under `sulaga-chan.github.io/nycc-web/`
+  without the custom domain, change `base` back to `/nycc-web/` and the asset paths to match.
