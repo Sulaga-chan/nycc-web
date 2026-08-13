@@ -27,7 +27,7 @@ export const MUSICIANS = [
   {
     group: 'Brass',
     members: [
-      { name: 'Reese Romero', instrument: 'Horn' },
+      { name: 'Reese Romero', instrument: 'Horn', photo: '/musicians/reese.jpg' },
       { name: 'TBD', instrument: 'Trumpet', status: 'Coming soon' },
       { name: 'TBD', instrument: 'Trombone', status: 'Coming soon' },
     ],
