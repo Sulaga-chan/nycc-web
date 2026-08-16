@@ -14,6 +14,7 @@ export const MUSICIANS = [
   {
     group: 'Keyboard',
     members: [
+      { name: 'Jane Lee', instrument: 'Piano', photo: '/musicians/jane-piano.jpg' },
       { name: 'Kimia Rafieian', instrument: 'Piano' },
     ],
   },
