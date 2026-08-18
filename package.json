@@ -6,7 +6,7 @@
   "description": "New York Chamber Collective — code-managed website (Jaehun's version)",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
+    "build": "vite build && node scripts/prerender.mjs",
     "preview": "vite preview"
   },
   "dependencies": {

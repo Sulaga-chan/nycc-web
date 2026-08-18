@@ -4,17 +4,17 @@ export const MUSICIANS = [
   {
     group: 'Strings',
     members: [
-      { name: 'Jane Lee', instrument: 'Violin', photo: '/musicians/jane.jpg' },
-      { name: 'Emma Northcutt', instrument: 'Violin', photo: '/musicians/emma.jpg' },
-      { name: 'Olive Fretts Howard', instrument: 'Viola', photo: '/musicians/olive.jpg' },
-      { name: 'Eugenia Cho', instrument: 'Violin', photo: '/musicians/eugenia.jpg' },
+      { name: 'Jane Lee', instrument: 'Violin', photo: '/img/musicians/jane.jpg' },
+      { name: 'Emma Northcutt', instrument: 'Violin', photo: '/img/musicians/emma.jpg' },
+      { name: 'Olive Fretts Howard', instrument: 'Viola', photo: '/img/musicians/olive.jpg' },
+      { name: 'Eugenia Cho', instrument: 'Violin', photo: '/img/musicians/eugenia.jpg' },
       { name: 'TBD', instrument: 'Cello', status: 'Coming soon' },
     ],
   },
   {
     group: 'Keyboard',
     members: [
-      { name: 'Jane Lee', instrument: 'Piano', photo: '/musicians/jane-piano.jpg' },
+      { name: 'Jane Lee', instrument: 'Piano', photo: '/img/musicians/jane-piano.jpg' },
       { name: 'Kimia Rafieian', instrument: 'Piano' },
     ],
   },
@@ -22,14 +22,14 @@ export const MUSICIANS = [
     group: 'Woodwinds',
     members: [
       { name: 'Nicole Martin', instrument: 'Clarinet' },
-      { name: 'Kennedy Plains', instrument: 'Bassoon', photo: '/musicians/kennedy.jpg' },
+      { name: 'Kennedy Plains', instrument: 'Bassoon', photo: '/img/musicians/kennedy.jpg' },
       { name: 'TBD', instrument: 'Flute', status: 'Coming soon' },
     ],
   },
   {
     group: 'Brass',
     members: [
-      { name: 'Reese Romero', instrument: 'Horn', photo: '/musicians/reese.jpg' },
+      { name: 'Reese Romero', instrument: 'Horn', photo: '/img/musicians/reese.jpg' },
       { name: 'TBD', instrument: 'Trumpet', status: 'Coming soon' },
       { name: 'TBD', instrument: 'Trombone', status: 'Coming soon' },
     ],
