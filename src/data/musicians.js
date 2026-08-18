@@ -8,7 +8,7 @@ export const MUSICIANS = [
       { name: 'Emma Northcutt', instrument: 'Violin', photo: '/img/musicians/emma.jpg' },
       { name: 'Eugenia Cho', instrument: 'Violin', photo: '/img/musicians/eugenia.jpg' },
       { name: 'Olive Fretts Howard', instrument: 'Viola', photo: '/img/musicians/olive.jpg' },
-      { name: 'Juewen Zhang', instrument: 'Cello', photo: '/img/musicians/juewen.jpg' },
+      { name: 'Juewen Zhang', instrument: 'Cello', photo: '/img/musicians/juewen-zhang.jpg' },
     ],
   },
   {
