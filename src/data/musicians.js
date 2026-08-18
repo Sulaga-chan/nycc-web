@@ -6,9 +6,9 @@ export const MUSICIANS = [
     members: [
       { name: 'Jane Lee', instrument: 'Violin', photo: '/img/musicians/jane.jpg' },
       { name: 'Emma Northcutt', instrument: 'Violin', photo: '/img/musicians/emma.jpg' },
-      { name: 'Olive Fretts Howard', instrument: 'Viola', photo: '/img/musicians/olive.jpg' },
       { name: 'Eugenia Cho', instrument: 'Violin', photo: '/img/musicians/eugenia.jpg' },
-      { name: 'TBD', instrument: 'Cello', status: 'Coming soon' },
+      { name: 'Olive Fretts Howard', instrument: 'Viola', photo: '/img/musicians/olive.jpg' },
+      { name: 'Juewen Zhang', instrument: 'Cello', photo: '/img/musicians/juewen.jpg' },
     ],
   },
   {
