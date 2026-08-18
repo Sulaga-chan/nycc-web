@@ -5,10 +5,10 @@ const ENSEMBLES = [
   'Violin Solo (Acoustic, or Amplified with backing track)',
   'Piano Solo',
   'Violin & Piano Duo',
-  'Mixed chamber ensemble',
-  'Wind ensemble',
-  'Brass ensemble',
-  'Chamber orchestra',
+  'Mixed Chamber Ensemble',
+  'Wind Ensemble',
+  'Brass Ensemble',
+  'Chamber Orchestra',
 ]
 
 const STYLES = [
