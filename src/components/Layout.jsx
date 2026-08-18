@@ -116,7 +116,7 @@ export default function Layout() {
               <input
                 type="hidden"
                 name="_next"
-                value="https://newyorkchambercollective.org/#/"
+                value="https://newyorkchambercollective.org/"
               />
               <input
                 type="email"

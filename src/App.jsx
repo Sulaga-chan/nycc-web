@@ -2,6 +2,7 @@ import { useEffect } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Layout from './components/Layout.jsx'
 import ScrollToTop from './components/ScrollToTop.jsx'
+import Seo from './components/Seo.jsx'
 import Home from './pages/Home.jsx'
 import About from './pages/About.jsx'
 import Services from './pages/Services.jsx'
@@ -26,6 +27,7 @@ export default function App() {
   return (
     <>
       <ScrollToTop />
+      <Seo />
       <Routes>
         <Route element={<Layout />}>
           <Route index element={<Home />} />

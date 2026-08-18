@@ -7,11 +7,42 @@
     <link rel="icon" type="image/png" sizes="192x192" href="/logo/icon-192.png" />
     <link rel="apple-touch-icon" href="/logo/apple-touch-icon.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>New York Chamber Collective</title>
+    <title>New York Chamber Collective | Live Chamber Music in NYC</title>
     <meta
       name="description"
       content="New York Chamber Collective — elegant live music for weddings, galas, and private events across New York City."
     />
+    <link rel="canonical" href="https://newyorkchambercollective.org/" />
+    <meta property="og:site_name" content="New York Chamber Collective" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="New York Chamber Collective" />
+    <meta
+      property="og:description"
+      content="Elegant live music for weddings, galas, and private events across New York City."
+    />
+    <meta property="og:url" content="https://newyorkchambercollective.org/" />
+    <meta property="og:image" content="https://newyorkchambercollective.org/hero.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <script>
+      // 1) Restore the real path after the 404.html fallback redirect (see public/404.html).
+      // 2) Redirect legacy hash URLs (/#/musicians) to clean paths (/musicians) so old
+      //    links and bookmarks keep working after the switch to BrowserRouter.
+      ;(function (l) {
+        if (l.search[1] === '/') {
+          var decoded = l.search
+            .slice(1)
+            .split('&')
+            .map(function (s) {
+              return s.replace(/~and~/g, '&')
+            })
+            .join('?')
+          window.history.replaceState(null, null, l.pathname.slice(0, -1) + decoded + l.hash)
+        }
+        if (window.location.hash.indexOf('#/') === 0) {
+          window.history.replaceState(null, null, window.location.hash.slice(1) || '/')
+        }
+      })(window.location)
+    </script>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
