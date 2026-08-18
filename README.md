@@ -25,29 +25,45 @@ which builds the site and publishes `dist/` to GitHub Pages automatically. No ma
 
 ```
 src/
-  App.jsx              routes (HashRouter)
+  App.jsx              routes (BrowserRouter)
+  seo-meta.mjs         per-route <title> and description
   styles.css           black & white classic-serif theme
   components/Layout.jsx  header nav + footer + socials
-  pages/               Home, About, Team, Musicians, Gallery, Contact
+  components/Seo.jsx   keeps meta tags in step during client-side navigation
+  pages/               Home, About, Services, Team, Musicians, Gallery, Video, Contact
   data/musicians.js    ensemble roster
+scripts/prerender.mjs  writes one real HTML file per route after the build
+public/img/            photos: img/team, img/musicians, img/gallery
 ```
 
 ## Editing content
 
 - **Team** — edit the `TEAM` array in `src/pages/Team.jsx`. Add a photo by dropping a
-  file in `public/` and setting `photo: '/team/name.jpg'`.
-- **Musicians** — edit `src/data/musicians.js`.
-- **Gallery** — currently empty. Add files to `public/gallery/` and list them in the
+  file in `public/img/team/` and setting `photo: '/img/team/name.jpg'`.
+- **Musicians** — edit `src/data/musicians.js`; photos live in `public/img/musicians/`.
+- **Gallery** — add files to `public/img/gallery/` and list them in the
   `PHOTOS` / `VIDEOS` arrays in `src/pages/Gallery.jsx`.
+- **Page titles / descriptions** — edit `src/seo-meta.mjs`. A new route added there
+  also needs an entry in `public/sitemap.xml`.
 - **Contact** — the form composes an email via the visitor's mail client. To collect
   submissions server-side, point it at a Formspree/Getform endpoint. Update
   `CONTACT_EMAIL` in `src/pages/Contact.jsx`.
 
 ## Notes
 
-- Routing uses `HashRouter` (URLs look like `/#/about`) so deep links never 404 on
-  GitHub Pages. Switch to `BrowserRouter` + a `404.html` fallback if clean URLs matter.
+- Routing uses `BrowserRouter`, so URLs are clean (`/services`, not `/#/services`).
+  GitHub Pages has no server-side routing, so `npm run build` runs
+  `scripts/prerender.mjs`, which writes a real `dist/<route>.html` for every route in
+  `src/seo-meta.mjs`. Pages serves extensionless URLs from those files, so each page
+  returns **200** with its own title and description already in the HTML — which is
+  what lets Google index them. `public/404.html` catches anything else (typos, old
+  links) and hands the path back to the app; `index.html` also rewrites legacy
+  `/#/page` URLs to `/page`.
+- Route names must not collide with folders in `public/` — that is why photos live
+  under `public/img/` rather than `public/musicians/`, which would shadow the
+  `/musicians` route.
 - `base` in `vite.config.js` is `/` because the site is served at the root of the custom
   domain **newyorkchambercollective.org** (via `public/CNAME`). Asset paths are root-absolute
-  (`/team/…`, `/hero.jpg`). If you ever serve it back under `sulaga-chan.github.io/nycc-web/`
-  without the custom domain, change `base` back to `/nycc-web/` and the asset paths to match.
+  (`/img/team/…`, `/hero.jpg`). Serving it back under `sulaga-chan.github.io/nycc-web/`
+  would need `base` changed to `/nycc-web/`, the asset paths updated to match, and the
+  absolute URLs in `seo-meta.mjs`, `sitemap.xml`, and `robots.txt` revisited.
