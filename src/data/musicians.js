@@ -34,4 +34,10 @@ export const MUSICIANS = [
       { name: 'TBD', instrument: 'Trombone', status: 'Coming soon' },
     ],
   },
+  {
+    group: 'Voice',
+    members: [
+      { name: 'Dwight L. Trice, Jr.', instrument: 'Singer', photo: '/img/musicians/dwight-trice.jpg' },
+    ],
+  },
 ]
