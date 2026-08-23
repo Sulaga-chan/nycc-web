@@ -21,7 +21,7 @@ export const MUSICIANS = [
   {
     group: 'Woodwinds',
     members: [
-      { name: 'Nicole Martin', instrument: 'Clarinet' },
+      { name: 'Nicole Martin', instrument: 'Clarinet', photo: '/img/musicians/nicole.jpg' },
       { name: 'Kennedy Plains', instrument: 'Bassoon', photo: '/img/musicians/kennedy.jpg' },
       { name: 'TBD', instrument: 'Flute', status: 'Coming soon' },
     ],
