@@ -8,8 +8,8 @@ const TEAM = [
     role: 'Founder · CEO',
     photo: '/img/team/jane.jpg',
     bio: [
-      'Jane is an active performer, educator, and administrator in New York City. She is a graduate from the University of Michigan where she earned her Master of Music degree in Violin Performance and studied with Professor David Halen, a concertmaster of the St. Louis Symphony Orchestra.',
-      'As a professional violinist, Jane performs with professional orchestras across the country and in small ensembles for weddings and private events across New York, New Jersey, and Connecticut. She performed in numerous worldwide venues including Carnegie Hall, Madison Square Garden, Lincoln Center, Metropolitan Club, The Lotos Club, and The Plaza Hotel in New York City.',
+      'Jane is an active performer, educator, and administrator in New York City. She holds both Bachelor and Master of Music degrees in Violin Performance, earning her Master of Music from the University of Michigan, where she studied with Professor David Halen, Concertmaster of the St. Louis Symphony Orchestra.',
+      'As a professional violinist, Jane performs with professional orchestras across the country and in small ensembles for weddings, private events, and special occasions throughout New York City and beyond. Her performances have taken place at renowned venues including Carnegie Hall, Lincoln Center, Madison Square Garden, The Plaza Hotel, The Metropolitan Club, and The Lotos Club in New York City.',
     ],
     website: 'https://www.janeleeviolin.com',
   },
