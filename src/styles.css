@@ -612,4 +612,11 @@ img {
   .hero-bottom {
     margin-left: 0;
   }
+
+  /* The hero photo is a wide group shot; a tall narrow viewport crops ~60% of its
+     width away. Shifting the focal point left of centre keeps two players fully in
+     frame instead of slicing one down the middle at the edge. */
+  .hero {
+    background-position: 42% center;
+  }
 }
