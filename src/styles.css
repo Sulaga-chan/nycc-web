@@ -240,7 +240,7 @@ img {
 /* ---------- Hero ---------- */
 .hero {
   position: relative;
-  min-height: 78vh;
+  min-height: 62vh;
   display: flex;
   align-items: stretch;
   background: #0d0d0d url('/hero.jpg') center / cover no-repeat;
@@ -443,8 +443,8 @@ img {
 
 /* ---------- Gallery ---------- */
 .gallery-grid {
-  columns: 3 280px;
-  column-gap: 1.25rem;
+  columns: 2 420px;
+  column-gap: 1.75rem;
 }
 
 .gallery-grid figure {
@@ -455,6 +455,73 @@ img {
 .gallery-grid img {
   width: 100%;
   height: auto;
+}
+
+.gallery-item {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: zoom-in;
+}
+
+.gallery-item img {
+  display: block;
+  transition: opacity 0.25s ease;
+}
+
+.gallery-item:hover img {
+  opacity: 0.88;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  background: rgba(10, 10, 10, 0.94);
+  display: grid;
+  place-items: center;
+  padding: clamp(1rem, 4vw, 3rem);
+  cursor: zoom-out;
+}
+
+.lightbox figure {
+  margin: 0;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.lightbox img {
+  display: block;
+  max-width: 100%;
+  max-height: 85vh;
+  width: auto;
+  height: auto;
+  margin: 0 auto;
+}
+
+.lightbox figcaption {
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: center;
+  margin-top: 1rem;
+}
+
+.lightbox-close {
+  position: absolute;
+  top: clamp(0.75rem, 2vw, 1.5rem);
+  right: clamp(0.75rem, 2vw, 1.5rem);
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 0;
+  background: none;
+  color: #fff;
+  font-size: 2rem;
+  line-height: 1;
+  cursor: pointer;
 }
 
 .gallery-grid figcaption {
