@@ -13,6 +13,11 @@ const PHOTOS = [
     alt: 'Live performance at the Metropolitan Club, New York',
     caption: 'Metropolitan Club, New York',
   },
+  {
+    src: '/img/gallery/central-park.jpg',
+    alt: 'String quartet performing at a pavilion in Central Park, New York',
+    caption: 'Central Park, New York',
+  },
 ]
 const VIDEOS = []
 
