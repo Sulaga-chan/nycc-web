@@ -9,8 +9,43 @@ const PHOTOS = [
     caption: 'Metropolitan Club, New York',
   },
   {
-    src: '/img/gallery/central-park.jpg',
-    alt: 'String quartet performing at a pavilion in Central Park, New York',
+    src: '/img/gallery/central-park-02.jpg',
+    alt: 'The quartet with the Manhattan skyline behind them in Central Park',
+    caption: 'Central Park, New York',
+  },
+  {
+    src: '/img/gallery/central-park-01.jpg',
+    alt: 'String quartet performing at a pavilion in Central Park',
+    caption: 'Central Park, New York',
+  },
+  {
+    src: '/img/gallery/central-park-03.jpg',
+    alt: 'The quartet between pieces at a Central Park pavilion',
+    caption: 'Central Park, New York',
+  },
+  {
+    src: '/img/gallery/central-park-04.jpg',
+    alt: 'Cellist playing beside the lake in Central Park',
+    caption: 'Central Park, New York',
+  },
+  {
+    src: '/img/gallery/central-park-05.jpg',
+    alt: 'Violinist performing beside the lake in Central Park',
+    caption: 'Central Park, New York',
+  },
+  {
+    src: '/img/gallery/central-park-06.jpg',
+    alt: 'Two violinists mid-performance in Central Park',
+    caption: 'Central Park, New York',
+  },
+  {
+    src: '/img/gallery/central-park-07.jpg',
+    alt: 'Violist with her instrument in Central Park',
+    caption: 'Central Park, New York',
+  },
+  {
+    src: '/img/gallery/central-park-08.jpg',
+    alt: 'Violinist with her instrument in Central Park',
     caption: 'Central Park, New York',
   },
 ]
