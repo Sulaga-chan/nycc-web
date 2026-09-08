@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 
 // To add images, drop files in /public/img/gallery and list them here. Videos can
 // use an <iframe> (YouTube/Vimeo) or a <video> tag.
@@ -48,17 +48,35 @@ const PHOTOS = [
     alt: 'Violinist with her instrument in Central Park',
     caption: 'Central Park, New York',
   },
+  {
+    src: '/img/gallery/hempstead-house-01.jpg',
+    alt: 'Violinist on the lawn in front of Hempstead House',
+    caption: 'Hempstead House, New York',
+  },
+  {
+    src: '/img/gallery/hempstead-house-02.jpg',
+    alt: 'Violinist before a performance at Hempstead House',
+    caption: 'Hempstead House, New York',
+  },
 ]
 const VIDEOS = []
 
 export default function Gallery() {
   const [open, setOpen] = useState(null)
+  const touchStartX = useRef(null)
 
-  // Close on Escape, and stop the page behind the overlay from scrolling.
+  const close = useCallback(() => setOpen(null), [])
+  const step = useCallback((delta) => {
+    setOpen((i) => (i === null ? i : (i + delta + PHOTOS.length) % PHOTOS.length))
+  }, [])
+
+  // Escape closes, arrow keys page through, and the page behind stays put.
   useEffect(() => {
     if (open === null) return
     const onKey = (e) => {
-      if (e.key === 'Escape') setOpen(null)
+      if (e.key === 'Escape') close()
+      else if (e.key === 'ArrowRight') step(1)
+      else if (e.key === 'ArrowLeft') step(-1)
     }
     const previous = document.body.style.overflow
     document.body.style.overflow = 'hidden'
@@ -67,9 +85,20 @@ export default function Gallery() {
       document.body.style.overflow = previous
       window.removeEventListener('keydown', onKey)
     }
-  }, [open])
+  }, [open, close, step])
 
   const photo = open === null ? null : PHOTOS[open]
+
+  // Swipe left/right on touch devices, where the arrows are easy to miss.
+  const onTouchStart = (e) => {
+    touchStartX.current = e.changedTouches[0].clientX
+  }
+  const onTouchEnd = (e) => {
+    if (touchStartX.current === null) return
+    const dx = e.changedTouches[0].clientX - touchStartX.current
+    touchStartX.current = null
+    if (Math.abs(dx) > 50) step(dx < 0 ? 1 : -1)
+  }
 
   return (
     <section className="section">
@@ -81,7 +110,7 @@ export default function Gallery() {
         {PHOTOS.length > 0 ? (
           <div className="gallery-grid" style={{ marginTop: '3rem' }}>
             {PHOTOS.map((p, i) => (
-              <figure key={i}>
+              <figure key={p.src}>
                 <button
                   type="button"
                   className="gallery-item"
@@ -120,14 +149,51 @@ export default function Gallery() {
           role="dialog"
           aria-modal="true"
           aria-label={photo.caption || photo.alt}
-          onClick={() => setOpen(null)}
+          onClick={close}
+          onTouchStart={onTouchStart}
+          onTouchEnd={onTouchEnd}
         >
           <button type="button" className="lightbox-close" aria-label="Close">
             &times;
           </button>
+
+          {PHOTOS.length > 1 && (
+            <>
+              <button
+                type="button"
+                className="lightbox-nav lightbox-prev"
+                aria-label="Previous photo"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  step(-1)
+                }}
+              >
+                &#8249;
+              </button>
+              <button
+                type="button"
+                className="lightbox-nav lightbox-next"
+                aria-label="Next photo"
+                onClick={(e) => {
+                  e.stopPropagation()
+                  step(1)
+                }}
+              >
+                &#8250;
+              </button>
+            </>
+          )}
+
           <figure>
             <img src={photo.src} alt={photo.alt} />
-            {photo.caption && <figcaption>{photo.caption}</figcaption>}
+            {photo.caption && (
+              <figcaption>
+                {photo.caption}
+                <span className="lightbox-count">
+                  {open + 1} / {PHOTOS.length}
+                </span>
+              </figcaption>
+            )}
           </figure>
         </div>
       )}
