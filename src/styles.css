@@ -390,7 +390,10 @@ img {
    up by the header's height, with the footer falling past the bottom edge. */
 .video-embed {
   position: relative;
-  aspect-ratio: 4 / 5;
+  /* Instagram renders the clip at 1.23–1.25x the card width depending on the reel.
+     Sizing to the shorter end means the white footer never peeks in below; the
+     tallest clips lose about a percent off the bottom, which is not noticeable. */
+  aspect-ratio: 50 / 61;
   overflow: hidden;
   background: #000;
 }
