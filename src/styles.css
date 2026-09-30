@@ -375,6 +375,27 @@ img {
   object-position: center bottom;
 }
 
+/* Wide establishing shot between the About heading and the body copy. */
+.about-photo {
+  margin: clamp(2rem, 5vw, 3rem) 0;
+}
+
+.about-photo img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 7;
+  object-fit: cover;
+  object-position: center 38%;
+}
+
+.form-sent {
+  margin-top: 1.75rem;
+  padding: 0.9rem 1.15rem;
+  border-left: 2px solid var(--ink, #111);
+  background: var(--bg-soft);
+  font-size: 0.95rem;
+}
+
 /* ---------- Video ---------- */
 .video-grid {
   display: grid;

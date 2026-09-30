@@ -3,7 +3,16 @@ export default function About() {
     <section className="section">
       <div className="container">
         <h1 className="page-title">About New York Chamber Collective</h1>
-        <div className="grid grid-2" style={{ marginTop: '2.5rem' }}>
+
+        <figure className="about-photo">
+          <img
+            src="/img/gallery/central-park-02.jpg"
+            alt="The New York Chamber Collective quartet in Central Park, with the Manhattan skyline behind them"
+            loading="lazy"
+          />
+        </figure>
+
+        <div className="grid grid-2">
           <div>
             <p>
               New York Chamber Collective is a premier ensemble of professional
