@@ -39,7 +39,8 @@ export const SEO = {
   },
   '/video': {
     title: `Video | ${NAME}`,
-    description: 'Performance videos from New York Chamber Collective — coming soon.',
+    description:
+      'Watch recent performances by New York Chamber Collective — string quartet and ensemble highlights from weddings, galas, and private events.',
   },
   '/contact': {
     title: `Contact | ${NAME}`,
