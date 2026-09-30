@@ -378,21 +378,24 @@ img {
 /* ---------- Video ---------- */
 .video-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: clamp(1.25rem, 3vw, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(1.25rem, 2.5vw, 2rem) clamp(1rem, 2vw, 1.75rem);
   margin-top: 3rem;
+}
+
+.video-figure {
+  margin: 0;
 }
 
 /* Instagram's embed wraps the clip in its own card: a 54px account header above
    and a row of like/comment icons below. Neither can be turned off through the
-   embed URL, so the wrapper crops them — it is exactly as tall as the clip
-   (Instagram renders the media at 4:5 of the card width) and the iframe is pulled
-   up by the header's height, with the footer falling past the bottom edge. */
+   embed URL, so the wrapper crops them — it is only as tall as the clip itself
+   and the iframe is pulled up by the header's height, leaving the footer past the
+   bottom edge. The reels are a mix of portrait and landscape, so Instagram
+   letterboxes them inside a fixed 4:5 media box; sizing to the shorter end of that
+   range (1.23x the width) keeps the white footer from ever peeking in. */
 .video-embed {
   position: relative;
-  /* Instagram renders the clip at 1.23–1.25x the card width depending on the reel.
-     Sizing to the shorter end means the white footer never peeks in below; the
-     tallest clips lose about a percent off the bottom, which is not noticeable. */
   aspect-ratio: 50 / 61;
   overflow: hidden;
   background: #000;
@@ -403,13 +406,20 @@ img {
   top: -54px;
   left: 0;
   width: 100%;
-  /* header + clip + enough slack that the footer is never in view */
   height: calc(100% + 54px + 260px);
   border: 0;
 }
 
+.video-figure figcaption {
+  margin-top: 0.85rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
 .video-note {
-  margin-top: 2.5rem;
+  margin-top: 3rem;
   color: var(--muted);
   font-size: 0.9rem;
 }
