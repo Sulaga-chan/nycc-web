@@ -383,21 +383,25 @@ img {
   margin-top: 3rem;
 }
 
-/* Instagram's embed is a fixed-width card that reports no height to the parent,
-   so the wrapper sets the height and the iframe fills it. 640px suits a reel
-   (9:16 video plus Instagram's own header and footer chrome). */
+/* Instagram's embed wraps the clip in its own card: a 54px account header above
+   and a row of like/comment icons below. Neither can be turned off through the
+   embed URL, so the wrapper crops them — it is exactly as tall as the clip
+   (Instagram renders the media at 4:5 of the card width) and the iframe is pulled
+   up by the header's height, with the footer falling past the bottom edge. */
 .video-embed {
   position: relative;
-  height: 640px;
-  background: var(--bg-soft);
+  aspect-ratio: 4 / 5;
   overflow: hidden;
+  background: #000;
 }
 
 .video-embed iframe {
   position: absolute;
-  inset: 0;
+  top: -54px;
+  left: 0;
   width: 100%;
-  height: 100%;
+  /* header + clip + enough slack that the footer is never in view */
+  height: calc(100% + 54px + 260px);
   border: 0;
 }
 
@@ -409,12 +413,6 @@ img {
 
 .video-note a {
   border-bottom: 1px solid currentColor;
-}
-
-@media (max-width: 480px) {
-  .video-embed {
-    height: 580px;
-  }
 }
 
 /* ---------- Musicians ---------- */
