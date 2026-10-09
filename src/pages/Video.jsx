@@ -4,6 +4,9 @@
 // To add one: open the reel on Instagram, copy the code out of
 // instagram.com/reel/<CODE>/, and add it below with the piece performed.
 const REELS = [
+  { code: 'DeM92oFJ3PB', title: 'Can You Feel The Love Tonight' },
+  { code: 'DeF7AqqM58e', title: 'Super Mario Theme' },
+  { code: 'DeF5SKhMgAQ', title: 'Twinkle Twinkle Little Star' },
   { code: 'Dd2VRPqRccn', title: 'So Easy (To Fall In Love)' },
   { code: 'Ddh4eZnM0_B', title: "Can't Help Falling In Love" },
   { code: 'Ddh3nnks662', title: 'Until I Find You' },
