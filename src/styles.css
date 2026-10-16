@@ -516,21 +516,25 @@ img {
 }
 
 /* ---------- Gallery ---------- */
+/* A real grid rather than CSS columns: multi-column fills each column top to
+   bottom, which would put the newest photos down the left edge instead of across
+   the first row. Grid reads left to right, so newest really is on top. */
 .gallery-grid {
-  /* Both values set, so this caps at three columns and drops to fewer as the
-     viewport narrows. */
-  columns: 3 260px;
-  column-gap: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
 }
 
 .gallery-grid figure {
-  break-inside: avoid;
-  margin: 0 0 1.25rem;
+  margin: 0;
 }
 
+/* Uniform tiles keep the rows aligned; the lightbox shows each photo uncropped. */
 .gallery-grid img {
   width: 100%;
-  height: auto;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+  display: block;
 }
 
 .gallery-item {
