@@ -789,10 +789,6 @@ img {
     order: 0;
   }
 
-  .gallery-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
   .hero-bottom {
     margin-left: 0;
   }
