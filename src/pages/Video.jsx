@@ -4,6 +4,8 @@
 // To add one: open the reel on Instagram, copy the code out of
 // instagram.com/reel/<CODE>/, and add it below with the piece performed.
 const REELS = [
+  { code: 'DefukekM_Po', title: 'Best Part' },
+  { code: 'Deft2ijMsVJ', title: 'Thinking Out Loud' },
   { code: 'DeM92oFJ3PB', title: 'Can You Feel The Love Tonight' },
   { code: 'DeF7AqqM58e', title: 'Super Mario Theme' },
   { code: 'DeF5SKhMgAQ', title: 'Twinkle Twinkle Little Star' },

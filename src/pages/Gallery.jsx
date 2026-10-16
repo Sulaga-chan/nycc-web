@@ -2,11 +2,37 @@ import { useCallback, useEffect, useRef, useState } from 'react'
 
 // To add images, drop files in /public/img/gallery and list them here. Videos can
 // use an <iframe> (YouTube/Vimeo) or a <video> tag.
+// Newest first.
 const PHOTOS = [
   {
-    src: '/img/gallery/gala.jpg',
-    alt: 'Live performance at the Metropolitan Club, New York',
-    caption: 'Metropolitan Club, New York',
+    src: '/img/gallery/upstate-ny-01.jpg',
+    alt: 'The quartet outside a stone manor at dusk in Upstate New York',
+    caption: 'Upstate New York',
+  },
+  {
+    src: '/img/gallery/upstate-ny-02.jpg',
+    alt: 'The quartet beside a glass pavilion in the autumn light, Upstate New York',
+    caption: 'Upstate New York',
+  },
+  {
+    src: '/img/gallery/legacy-castle-01.jpg',
+    alt: 'Violinist in the grand foyer of The Legacy Castle, New Jersey',
+    caption: 'The Legacy Castle, New Jersey',
+  },
+  {
+    src: '/img/gallery/legacy-castle-02.jpg',
+    alt: 'Violinist in the ceremony ballroom at The Legacy Castle, New Jersey',
+    caption: 'The Legacy Castle, New Jersey',
+  },
+  {
+    src: '/img/gallery/hempstead-house-01.jpg',
+    alt: 'Violinist on the lawn in front of Hempstead House',
+    caption: 'Hempstead House, New York',
+  },
+  {
+    src: '/img/gallery/hempstead-house-02.jpg',
+    alt: 'Violinist before a performance at Hempstead House',
+    caption: 'Hempstead House, New York',
   },
   {
     src: '/img/gallery/central-park-02.jpg',
@@ -49,14 +75,9 @@ const PHOTOS = [
     caption: 'Central Park, New York',
   },
   {
-    src: '/img/gallery/hempstead-house-01.jpg',
-    alt: 'Violinist on the lawn in front of Hempstead House',
-    caption: 'Hempstead House, New York',
-  },
-  {
-    src: '/img/gallery/hempstead-house-02.jpg',
-    alt: 'Violinist before a performance at Hempstead House',
-    caption: 'Hempstead House, New York',
+    src: '/img/gallery/gala.jpg',
+    alt: 'Live performance at the Metropolitan Club, New York',
+    caption: 'Metropolitan Club, New York',
   },
 ]
 const VIDEOS = []

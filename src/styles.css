@@ -517,8 +517,10 @@ img {
 
 /* ---------- Gallery ---------- */
 .gallery-grid {
-  columns: 2 420px;
-  column-gap: 1.75rem;
+  /* Both values set, so this caps at three columns and drops to fewer as the
+     viewport narrows. */
+  columns: 3 260px;
+  column-gap: 1.5rem;
 }
 
 .gallery-grid figure {
