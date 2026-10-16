@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom'
+import { TESTIMONIALS } from '../data/testimonials.js'
 
 export default function Home() {
   return (
@@ -54,6 +55,31 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {TESTIMONIALS.length > 0 && (
+        <section className="section">
+          <div className="container">
+            <p className="eyebrow" style={{ textAlign: 'center' }}>
+              Kind Words
+            </p>
+            <div className="testimonials">
+              {TESTIMONIALS.map((t) => (
+                <figure className="testimonial" key={t.name}>
+                  <span className="testimonial-mark" aria-hidden="true">
+                    &rdquo;
+                  </span>
+                  <blockquote>{t.quote}</blockquote>
+                  <figcaption>
+                    <span className="testimonial-name">{t.name}</span>
+                    <span className="testimonial-role">{t.role}</span>
+                    <span className="testimonial-org">New York Chamber Collective</span>
+                  </figcaption>
+                </figure>
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
     </>
   )
 }
