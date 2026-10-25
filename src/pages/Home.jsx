@@ -44,7 +44,7 @@ export default function Home() {
                 Based in New York City, New York Chamber Collective brings
                 exceptional live music to life's most memorable moments — weddings,
                 corporate events, private parties, galas, and proposals throughout
-                the metropolitan area.
+                the metropolitan area and beyond.
               </p>
               <p style={{ marginTop: '1.5rem' }}>
                 <Link to="/about" className="btn">
