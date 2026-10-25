@@ -20,7 +20,7 @@ export default function About() {
               memorable moments. Based in New York City, we provide elegant
               performances for weddings, corporate events, private parties, galas,
               proposals, and other special occasions throughout the New York
-              metropolitan area.
+              metropolitan area and beyond.
             </p>
             <p>
               Our musicians are experienced performers who regularly appear with

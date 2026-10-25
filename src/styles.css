@@ -499,52 +499,6 @@ img {
   color: var(--muted);
 }
 
-/* Live-feed cards: our own thumbnail and play badge, so the grid keeps the
-   site's styling instead of Instagram's embed chrome. */
-.video-card {
-  position: relative;
-  display: block;
-  width: 100%;
-  padding: 0;
-  border: 0;
-  background: #000;
-  cursor: pointer;
-  overflow: hidden;
-}
-
-.video-card img {
-  display: block;
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  transition: opacity 0.25s ease;
-}
-
-.video-card:hover img {
-  opacity: 0.85;
-}
-
-.video-play {
-  position: absolute;
-  inset: 0;
-  margin: auto;
-  width: 0;
-  height: 0;
-  border-style: solid;
-  border-width: 1.1rem 0 1.1rem 1.8rem;
-  border-color: transparent transparent transparent rgba(255, 255, 255, 0.92);
-  filter: drop-shadow(0 1px 6px rgba(0, 0, 0, 0.4));
-  pointer-events: none;
-}
-
-.lightbox video {
-  display: block;
-  max-width: 100%;
-  max-height: 85vh;
-  margin: 0 auto;
-  background: #000;
-}
-
 .video-note {
   margin-top: 3rem;
   color: var(--muted);
