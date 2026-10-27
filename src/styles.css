@@ -457,18 +457,20 @@ img {
 }
 
 /* ---------- Video ---------- */
-/* Self-hosted clips are landscape, so they sit in their own wider grid above the
-   portrait Instagram reels. */
+/* The clips are shot vertically (9:16) — their MP4 headers say 1280x720 but carry
+   a rotation flag, so the decoded frame is 720x1280. The grid is capped in width
+   so two of them sit as a centred pair rather than stretching across the page. */
 .clip-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
-  gap: clamp(1.25rem, 3vw, 2rem);
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: clamp(1.25rem, 3vw, 1.75rem);
   margin-top: 3rem;
+  max-width: 44rem;
 }
 
 .clip {
   width: 100%;
-  aspect-ratio: 16 / 9;
+  aspect-ratio: 9 / 16;
   display: block;
   background: #000;
 }
