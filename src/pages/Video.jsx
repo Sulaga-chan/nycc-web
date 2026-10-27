@@ -17,6 +17,13 @@ const REELS = [
   { code: 'DcjPug7RwQt', title: 'Stand By Me' },
 ]
 
+// Clips hosted on the site itself — landscape footage, so they get their own
+// 16:9 section rather than sharing the reels' 4:5 grid.
+const CLIPS = [
+  { src: '/video/clip-01.mp4' },
+  { src: '/video/clip-02.mp4' },
+]
+
 const INSTAGRAM = 'https://www.instagram.com/newyorkchambercollective/'
 
 export default function Video() {
@@ -27,6 +34,23 @@ export default function Video() {
         <h1 className="lead" style={{ maxWidth: '22ch' }}>
           Hear us play, from the ceremony to the last encore.
         </h1>
+
+        {CLIPS.length > 0 && (
+          <div className="clip-grid">
+            {CLIPS.map((c) => (
+              <video
+                key={c.src}
+                className="clip"
+                src={c.src}
+                controls
+                preload="metadata"
+                playsInline
+              />
+            ))}
+          </div>
+        )}
+
+        <p className="eyebrow video-subhead">From Instagram</p>
 
         <div className="video-grid">
           {REELS.map(({ code, title }) => (
